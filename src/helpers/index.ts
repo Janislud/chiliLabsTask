@@ -6,7 +6,6 @@ const getData = async () => {
     return res.json();
   }
 
-
   export const getSingleProduct = async (id: number) => {
     try {
       const res = await fetch(`https://jsonserver.reactbd.com/phone/${id}`);
@@ -14,7 +13,6 @@ const getData = async () => {
         throw new Error(`Failed to fetch product with id ${id}`);
       }
       const product = await res.json();
-      console.log("Fetched product:", product); // Логируем полученные данные
       return product;
     } catch (error) {
       console.error(error);

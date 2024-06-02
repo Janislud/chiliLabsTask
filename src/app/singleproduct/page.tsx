@@ -7,17 +7,14 @@ type Props = {
 
 const SingleProduct = async ({ searchParams }: Props) => {
   const _idString = searchParams?._id;
-  console.log("searchParams:", searchParams); // Логируем searchParams
 
   if (!_idString) {
     return <div>Product ID not found in search parameters</div>;
   }
 
   const _id = Number(_idString);
-  console.log("Product ID:", _id); // Логируем ID продукта
-
   const product = await getSingleProduct(_id);
-  console.log("Product data:", product); // Логируем данные продукта
+ 
 
   if (!product) {
     return <div>Product not found</div>;

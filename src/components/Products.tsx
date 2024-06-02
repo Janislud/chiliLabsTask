@@ -40,7 +40,6 @@ const Products = ({ products }: Props) => {
             <h2>{item.title}</h2>
             <p>{item.price}</p>
             <p>{item.previousPrice}</p>
-            {/* <p>{item.isNew ? 'New' : 'Old'}</p> */}
             <p>{item.category}</p>
             <p>{item.brand}</p>
           </div>

@@ -22,7 +22,7 @@ export default function Home() {
         setProducts(data);
         setLoading(false);
       } catch (err) {
-        // setError(err.message);
+        setError(err.message);
         setLoading(false);
       }
     };
