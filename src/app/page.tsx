@@ -1,9 +1,11 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Products from '../components/Products';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const getData = async () => {
-  const res = await fetch('https://jsonserver.reactbd.com/phone');
+  const res = await fetch('https://jsonserver.reactbd.com/amazonpro');
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
@@ -21,7 +23,7 @@ export default function Home() {
         const data = await getData();
         setProducts(data);
         setLoading(false);
-      } catch (err) {
+      } catch (err:any) {
         setError(err.message);
         setLoading(false);
       }
@@ -34,9 +36,11 @@ export default function Home() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <main>
+    <>
+      <Header/>
       <Products products={products} />
-    </main>
+      <Footer/>
+    </>
   );
 }
 

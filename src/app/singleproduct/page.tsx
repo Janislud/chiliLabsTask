@@ -1,4 +1,4 @@
-import { getSingleProduct } from "@/helpers";
+import { getSinglePhoneCase, getSingleProduct } from "@/helpers";
 import Image from "next/image";
 
 type Props = {
@@ -14,6 +14,7 @@ const SingleProduct = async ({ searchParams }: Props) => {
 
   const _id = Number(_idString);
   const product = await getSingleProduct(_id);
+  const phonecase = await getSinglePhoneCase(_id);
  
 
   if (!product) {
