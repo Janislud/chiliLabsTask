@@ -1,33 +1,41 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* HEADER */
+.navigation-wrapper {
+  @apply flex flex-wrap;
+  @apply mx-auto px-4;
+  /* @apply space-x-25; /* Применяем промежуток в 25 пикселей между элементами по горизонтали */
+  /* @apply my-25 mx-auto; Применяем верхний и нижний отступы в 25 пикселей и центрируем контейнер по горизонтали */ 
+}
+/* Стилизация контейнера */
+.container {
+  @apply mx-auto px-4; /* Применяем стили Tailwind для центрирования и отступов контейнера */
+  @apply flex flex-wrap;
+}
+/* Увеличение размера текста для заголовков */
+h1 {
+  @apply text-4xl font-bold; /* Применяем стили Tailwind для размера текста и жирного начертания */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Стилизация кнопок */
+.btn {
+  @apply inline-block px-4 py-2 bg-blue-500 text-white font-semibold rounded shadow hover:bg-blue-600; /* Применяем стили Tailwind для кнопок */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Стилизация ссылок */
+a {
+  @apply text-blue-500 hover:underline; /* Применяем стили Tailwind для ссылок */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
+/* Стилизация формы */
+.form-input {
+  @apply block w-full px-4 py-2 leading-tight bg-white border border-gray-300 rounded shadow-sm focus:outline-none focus:border-blue-500; /* Применяем стили Tailwind для элементов формы */
+}
+
+/* Стилизация карточек */
+.card {
+  @apply bg-white rounded-lg shadow-md p-4; /* Применяем стили Tailwind для карточек */
+}
+

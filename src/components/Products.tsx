@@ -36,23 +36,23 @@ const Products = ({ products }: Props) => {
   }, [searchTerm, products]);
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search products"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+    <div className='container mx-auto px-4 flex flex-wrap items-center text-center justify-center mt-5'>
       <div>
+        <input
+          type="text"
+          placeholder="Search products"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="mx-auto text-center border border-black rounded-full p-3"
+        />
+      </div>
+      <div className='container mx-auto px-4 flex flex-wrap items-center text-center justify-center gap-10'>
         {filteredProducts.map((item) => (
           <Link 
-            href={{
-              pathname: "/singleproduct",
-              query: { _id: item?._id.toString() }
-            }} 
+            href={`/singleproduct?_id=${item._id}`}
             key={item._id}
           >
-            <div>
+            <div className='card text-black'>
               {item.image ? (
                 <Image src={item.image} alt={item.title} width={200} height={200} priority />
               ) : (

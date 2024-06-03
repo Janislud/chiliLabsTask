@@ -1,22 +1,16 @@
 import Products from "@/components/Products";
+import { getPhone } from "@/helpers";
 import Link from "next/link";
 
-const getData = async () => {
-    const res = await fetch('https://jsonserver.reactbd.com/phone');
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-    return res.json();
-  }
 
-const Phone = async () => {
-    const products = await getData();
+const PhoneCase = async () => {
+    const products = await getPhone();
     return (
         <div>
             <Link href={'/'}>Home</Link>
-            <Products products={products} />
+            <Products products={products}/>
         </div>
-    )
-}
+    );
+};
 
-export default Phone;
+export default PhoneCase;

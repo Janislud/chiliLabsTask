@@ -1,5 +1,5 @@
-const getData = async () => {
-    const res = await fetch('https://jsonserver.reactbd.com/phone');
+export const getData = async () => {
+    const res = await fetch('https://jsonserver.reactbd.com/amazonpro');
     if (!res.ok) {
       throw new Error('Failed to fetch data');
     }
@@ -8,7 +8,7 @@ const getData = async () => {
 
   export const getSingleProduct = async (id: number) => {
     try {
-      const res = await fetch(`https://jsonserver.reactbd.com/phone/${id}`);
+      const res = await fetch(`https://jsonserver.reactbd.com/amazonpro/${id}`);
       if (!res.ok) {
         throw new Error(`Failed to fetch product with id ${id}`);
       }
@@ -20,12 +20,25 @@ const getData = async () => {
     }
   };
 
+  export const getPhone = async () => {
+    try {
+      const res = await fetch(`https://jsonserver.reactbd.com/phone`);
+      if (!res.ok) {
+        throw new Error(`Failed to fetch product`);
+      }
+      const product = await res.json();
+      return product;
+    } catch (error) {
+      console.error(error);
+      return undefined;
+    }
+  };
   
-  export const getSinglePhoneCase = async (id: number) => {
+  export const getPhoneCase = async () => {
     try {
-      const res = await fetch(`https://jsonserver.reactbd.com/phonecase/${id}`);
+      const res = await fetch(`https://jsonserver.reactbd.com/phonecase`);
       if (!res.ok) {
-        throw new Error(`Failed to fetch product with id ${id}`);
+        throw new Error(`Failed to fetch product`);
       }
       const product = await res.json();
       return product;
@@ -35,11 +48,11 @@ const getData = async () => {
     }
   };
 
-  export const getSingleAccsesories = async (id: number) => {
+  export const getAccsesories = async () => {
     try {
-      const res = await fetch(`https://jsonserver.reactbd.com/accessories/${id}`);
+      const res = await fetch(`https://jsonserver.reactbd.com/accessories`);
       if (!res.ok) {
-        throw new Error(`Failed to fetch product with id ${id}`);
+        throw new Error(`Failed to fetch product`);
       }
       const product = await res.json();
       return product;
@@ -49,11 +62,11 @@ const getData = async () => {
     }
   };
 
-  export const getSingleWatch = async (id: number) => {
+  export const getWatch = async () => {
     try {
-      const res = await fetch(`https://jsonserver.reactbd.com/watch/${id}`);
+      const res = await fetch(`https://jsonserver.reactbd.com/watch`);
       if (!res.ok) {
-        throw new Error(`Failed to fetch product with id ${id}`);
+        throw new Error(`Failed to fetch product`);
       }
       const product = await res.json();
       return product;
