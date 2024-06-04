@@ -51,7 +51,7 @@ const Products = ({ products }: Props) => {
   };
 
   return (
-    <div className="container mx-auto px-4 flex flex-wrap items-center text-center justify-center mt-9 mb-9">
+    <main className="container mx-auto px-4 flex flex-wrap items-center text-center justify-center mt-9 mb-9">
       <input
         type="text"
         placeholder="Search products"
@@ -94,7 +94,7 @@ const Products = ({ products }: Props) => {
             ))}
         </div>
       )}
-    </div>
+    </main>
   );
 };
 
