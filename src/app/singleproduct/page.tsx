@@ -20,16 +20,17 @@ const SingleProduct = async ({ searchParams }: Props) => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <main className="container mx-auto px-4 py-6">
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl border border-grey border-1">
         {product.image ? (
-          <div className="relative h-64">
+          <div className="relative h-124">
             <Image
+              className="single-img"
               src={product.image}
               alt="product image"
               objectFit="cover"
-              width={250}
-              height={250}
+              width={200}
+              height={200}
               priority
             />
           </div>
@@ -43,7 +44,7 @@ const SingleProduct = async ({ searchParams }: Props) => {
           <p className="text-gray-700 mb-2">Category: {product.category}</p>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

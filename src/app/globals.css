@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* HEADER */
-.navigation-wrapper {
-  @apply flex flex-wrap;
-  @apply mx-auto px-4;
-}
-/*  */
-
 /* MAIN */
-.container {
-  @apply mx-auto px-4;
-  @apply flex flex-wrap;
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 }
 
-.card {
-  @apply bg-white rounded-lg shadow-md p-4;
+.img {
+  width: 300px;
+  height: 350px;
 }
-/*  */
+
+.single-img {
+  width: 550px;
+  height: 550px;
+}
