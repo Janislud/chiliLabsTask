@@ -1,12 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Products from '../components/Products';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { getData } from '@/helpers';
-
-
-
 
 export default function Home() {
   const [products, setProducts] = useState<ProductProps[]>([]);
@@ -33,9 +28,7 @@ export default function Home() {
 
   return (
     <>
-      <Header/>
       <Products products={products} />
-      <Footer/>
     </>
   );
 }
