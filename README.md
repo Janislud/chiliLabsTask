@@ -1,40 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Next.js Project README
+This is a Next.js project bootstrapped with create-next-app.
 
-## Getting Started
+Getting Started
+To start working on this project, follow these steps:
 
-First, run the development server:
+Clone the repository:
 
-```bash
+bash
+git clone <repository-url>
+Install dependencies:
+
+bash
+npm install
+Run the development server:
+
+bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 with your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Project Structure
+Pages: All page components reside in the pages directory. Each file in this directory corresponds to a route in the application.
+Components: Reusable components are placed in the components directory.
+Helpers: Utility functions and data fetching logic are stored in the helpers directory.
+Font Optimization
+This project utilizes next/font to automatically optimize and load Inter, a custom Google Font.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Data Fetching
+Data is fetched from the free API server at https://jsonserver.reactbd.com/. Various helper functions are provided in the helpers directory to fetch different types of data.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Testing
+This project uses Jest along with @testing-library/react and @testing-library/jest-dom for testing. To run tests, use the following command:
 
-## Learn More
+bash
+npm test
+Make sure to install the required testing dependencies before running tests:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-Using free api server: https://jsonserver.reactbd.com/
-Rotes: Using next.js routs.
-Helpers: fetch data.
+bash
+npm install --save-dev @testing-library/jest-dom @testing-library/react @testing-library/user-event jest jest-environment-jsdom ts-jest eslint-plugin-jest-dom eslint-plugin-testing-library
+Additional Notes
+Routing: The project uses Next.js routes for navigation.
+Linting: ESLint is set up for code linting with Jest plugin for testing best practices.
+Feel free to modify this README as needed to fit the requirements of your project!
